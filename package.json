@@ -1,10 +1,10 @@
 {
-  "name": "polybot",
+  "name": "polybot-cli",
   "version": "0.1.0",
   "description": "multiplatform chatbots deployments",
   "main": "./build/lib/index",
-  "repository": "polybot-io/polybot-cli",
-  "author": "Mario Colque <colquemario@gmail.com>",
+  "repository": "polybotIO/polybot-cli",
+  "author": "Mario Colque <mario@hashdog.com>",
   "license": "MIT",
   "scripts": {
     "start": "gulp",
