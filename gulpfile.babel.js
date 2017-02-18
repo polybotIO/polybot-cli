@@ -6,22 +6,19 @@ import {crop as cropExt} from 'gulp-ext'
 
 gulp.task('help', help)
 
-gulp.task('compile', [
-  'compile-lib',
-  'compile-bin'
-])
+gulp.task('compile', ['compile-lib', 'compile-bin'])
 
 gulp.task('compile-bin', () =>
-gulp.src('bin/*')
-.pipe(babel())
-.pipe(cropExt())
-.pipe(gulp.dest('build/bin'))
+  gulp.src('bin/*')
+    .pipe(babel())
+    .pipe(cropExt())
+    .pipe(gulp.dest('build/bin'))
 )
 
 gulp.task('compile-lib', () =>
   gulp.src('lib/**/*.js')
-  .pipe(babel())
-  .pipe(gulp.dest('build/lib'))
+    .pipe(babel())
+    .pipe(gulp.dest('build/lib'))
 )
 
 gulp.task('watch-bin', () => gulp.watch('bin/*', ['compile-bin']))
